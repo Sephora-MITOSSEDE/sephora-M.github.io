@@ -5,130 +5,470 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Séphora MITOSSEDE | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séphora MITOSSEDE | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Séphora MITOSSEDE</h1>
-            <h3>Data Scientist | Data Analyst — Statistiques, Machine Learning & NLP</h3>
-            <p>Je suis <strong>Data Scientist / Data Analyst</strong>, spécialisée en statistiques appliquées et fiabilisation de données complexes.</p>
-            <a href="#contact" class="btn-primary">Me contacter</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
+
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <p class="greeting">Bonjour, je suis</p>
+                <h1 class="main-name">Séphora MITOSSEDE</h1>
+                <p class="main-title">Data Scientist | Data Analyst</p>
+                <p class="main-subtitle">Statistiques, Machine Learning & NLP</p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn-fill">Découvrir mon profil</a>
+                    <a href="#contact" class="btn-outline">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
 
     <div class="container">
         
-        <section class="section">
-            <p class="main-intro">Mon expertise me permet de transformer des données brutes en indicateurs stratégiques et en outils d'aide à la décision (Dashboards, Modèles prédictifs).</p>
+        <section id="about" class="section">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="img/IMG_5376.jpg" alt="Séphora MITOSSEDE">
+                </div>
+
+                <div class="about-info">
+                    <h3>Bienvenue sur mon portfolio</h3>
+                    <p>Je suis <strong>Data Scientist / Data Analyst</strong>, spécialisée en statistiques appliquées et fiabilisation de données complexes. Mon expertise me permet de transformer des données brutes en indicateurs stratégiques et en outils d'aide à la décision.</p>
+                    
+                    <div class="info-box-container">
+                        <div class="info-box">
+                            <i class="fas fa-envelope"></i>
+                            <span>mitossedes@gmail.com</span>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Rennes, France</span>
+                        </div>
+                    </div>
+
+                    <a href="CV_dataSeph.pdf" class="btn-cv" download>
+                        <i class="fas fa-download"></i> Télécharger mon CV
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">Ce que je peux faire pour vous</h2>
-            <ul class="services-list">
-                <li><strong>Analyse & Fiabilisation de Données</strong> : Audit de qualité, nettoyage et protocoles méthodologiques pour garantir des données fiables à 100%.</li>
-                <li><strong>Modélisation & Machine Learning</strong> : Développement de modèles prédictifs (Random Forest, LASSO, Régularisation) optimisés pour la robustesse.</li>
-                <li><strong>Expertise NLP & IA Générative</strong> : Conception de chatbots intelligents, systèmes de recommandation et traitement automatique du langage (LLMs, RAG).</li>
-                <li><strong>Visualisation Stratégique</strong> : Création de supports décisionnels interactifs (Power BI, Tableau, Streamlit, RShiny).</li>
+        <section id="expertises" class="section expertise-section">
+            <h2 class="section-title">Expertises & Solutions Data</h2>
+            <div class="skills-portfolio-grid">
+                
+                <div class="skill-card" onclick="openModal('modal-prog')">
+                    <div class="skill-overlay"><h4>Programmation & Outils</h4></div>
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500" alt="Code">
+                </div>
+
+                <div class="skill-card" onclick="openModal('modal-ml')">
+                    <div class="skill-overlay"><h4>Machine Learning</h4></div>
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=500" alt="IA">
+                </div>
+
+                <div class="skill-card" onclick="openModal('modal-nlp')">
+                    <div class="skill-overlay"><h4>NLP & IA Générative</h4></div>
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500" alt="NLP">
+                </div>
+
+                <div class="skill-card" onclick="openModal('modal-cloud')">
+                    <div class="skill-overlay"><h4>Cloud & Big Data</h4></div>
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500" alt="Cloud">
+                </div>
+
+                <div class="skill-card" onclick="openModal('modal-viz')">
+                    <div class="skill-overlay"><h4>Visualisation & BI</h4></div>
+                    <img src="https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stats">
+                </div>
+
+                <div class="skill-card" onclick="openModal('modal-mlops')">
+                    <div class="skill-overlay"><h4>MLOps & Soft Skills</h4></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500" alt="Team">
+                </div>
+
+            </div>
+        </section>
+
+        <div id="modal-container" class="modal-bg" onclick="closeModal()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+        <div id="content-prog" style="display:none;">
+            <h3>Programmation & Outils</h3>
+            <ul>
+                <li>R (tidyverse, tidymodels)</li>
+                <li>Python (Pandas, PySpark, NumPy, statsmodels)</li>
+                <li>SQL</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
+        <div id="content-ml" style="display:none;">
+            <h3>Machine Learning & Deep Learning</h3>
+            <ul>
+                <li>Scikit-learn, TensorFlow, Keras, PyTorch</li>
+                <li>Modélisation prédictive (Random Forest, LASSO, Régularisation)</li>
+                <li>Fiabilisation de données complexes</li>
+            </ul>
+        </div>
+
+        <div id="content-nlp" style="display:none;">
+            <h3>NLP & IA Générative</h3>
+            <ul>
+                <li>LLMs & Transformers (Hugging Face)</li>
+                <li>RAG (Retrieval-Augmented Generation) & Embeddings</li>
+                <li>spaCy, NLTK, analyse de sentiments</li>
+            </ul>
+        </div>
+
+        <div id="content-cloud" style="display:none;">
+            <h3>Cloud & Big Data</h3>
+            <ul>
+                <li>Google Cloud Platform (GCP)</li>
+                <li>Google Cloud Storage</li>
+                <li>Exploitation de bases de données massives</li>
+            </ul>
+        </div>
+
+        <div id="content-viz" style="display:none;">
+            <h3>Visualisation & Data Apps</h3>
+            <ul>
+                <li>Power BI & Tableau</li>
+                <li>Matplotlib, Seaborn</li>
+                <li>Data apps : RShiny, Streamlit, Flask (API REST)</li>
+            </ul>
+        </div>
+
+        <div id="content-mlops" style="display:none;">
+            <h3>MLOps & Soft Skills</h3>
+            <ul>
+                <li>Versioning : Git, GitHub, GitLab</li>
+                <li>Rigueur et esprit analytique</li>
+                <li>Esprit d'équipe et communication technique</li>
+            </ul>
+        </div>
+
+
+        <section id="experiences" class="section">
             <h2 class="section-title">Expériences Professionnelles</h2>
             
-            <div class="experience-block">
-                <h4>Data Scientist — INSEE (Alternance)</h4>
-                <p class="meta">Septembre 2025 – en cours | Rennes, France</p>
-                <ul>
-                    <li>Fiabilisation des données de revenus par la conception d'un protocole d'évaluation de la stabilité des imputations.</li>
-                    <li>Amélioration de la qualité des données via des méthodes d'imputation avancées (Machine Learning).</li>
-                    <li>Optimisation de l'interprétabilité des modèles par sélection de variables (LASSO, Ridge, Elastic Net).</li>
-                </ul>
-            </div>
+            <div class="timeline-v2">
+                <div class="timeline-item right">
+                    <div class="timeline-logo">
+                        <img src="img/logo_insee.jpg" alt="INSEE">
+                    </div>
+                    <div class="timeline-content">
+                        <span class="date-tag">Sept. 2025 - Présent</span>
+                        <h4>Alternance | Data Scientist - INSEE</h4>
+                        <p class="loc">Rennes, France</p>
+                        <ul class="mission-list">
+                            <li>Fiabilisation de données de revenus par l'évaluation de la stabilité et de la robustesse des imputations.</li>
+                            <li>Amélioration de la qualité des données via des méthodes de Machine Learning (Random Forest, MICE).</li>
+                            <li>Optimisation et interprétabilité des modèles par sélection de variables (LASSO, Ridge).</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="experience-block">
-                <h4>Data Analyst — EHESP (CDD)</h4>
-                <p class="meta">Décembre 2024 – Août 2025 | Rennes, France</p>
-                <ul>
-                    <li>Pilotage complet du processus d'enquête et conception de tableaux de bord interactifs.</li>
-                    <li>Développement de rapports analytiques reproductibles en santé publique (R Markdown).</li>
-                    <li>Analyse et préparation de bases de données complexes sous Python et R.</li>
-                </ul>
-            </div>
+                <div class="timeline-item left">
+                    <div class="timeline-logo">
+                        <img src="img/logo_ehesp.png" alt="EHESP">
+                    </div>
+                    <div class="timeline-content">
+                        <span class="date-tag">Déc. 2024 - Août 2025</span>
+                        <h4>CDD | Data analyst - EHESP</h4>
+                        <p class="loc">Rennes, France</p>
+                        <ul class="mission-list">
+                            <li>Pilotage du processus d'enquête et conception de tableaux de bord interactifs.</li>
+                            <li>Développement de rapports analytiques reproductibles (R Markdown).</li>
+                            <li>Préparation de bases de données complexes avec Python, R et Excel.</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="experience-block">
-                <h4>Statisticienne — Ministère de l’Économie (Stage)</h4>
-                <p class="meta">Mai 2023 – Juillet 2023 | Cotonou, Bénin</p>
-                <ul>
-                    <li>Analyse de données sur la mobilité urbaine et les transports collectifs.</li>
-                    <li>Nettoyage, contrôle de cohérence et imputation de données sous R.</li>
-                </ul>
+                <div class="timeline-item right">
+                    <div class="timeline-logo">
+                        <img src="img/logo_dge_benin.png" alt="DSPSSEL">
+                    </div>
+                    <div class="timeline-content">
+                        <span class="date-tag">Mai 2023 - Juil. 2023</span>
+                        <h4>Stage | Statisticienne - DSPSSEL</h4>
+                        <p class="loc">Cotonou, Bénin</p>
+                        <ul class="mission-list">
+                            <li>Conception et exploitation d'enquêtes statistiques sur la mobilité urbaine à Cotonou.</li>
+                            <li>Nettoyage, contrôle de cohérence et imputation de données sous R.</li>
+                            <li>Visualisation et synthèse des résultats pour l'aide à la décision.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-logo">
+                        <img src="img/logo-bsic.jpg" alt="BSIC">
+                    </div>
+                    <div class="timeline-content">
+                        <span class="date-tag">Déc. 2021 - Mars 2022</span>
+                        <h4>Stage | Gestion des Risques - BSIC</h4>
+                        <p class="loc">Cotonou, Bénin</p>
+                        <ul class="mission-list">
+                            <li><strong>Analyse prédictive :</strong> Déterminants des créances en souffrance pour le profil type du client solvable.</li>
+                            <li><strong>Audit :</strong> Vérification effective des pièces de crédit et dépouillement des dossiers.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+
+        <section id="formation" class="section formation-section">
+            <h2 class="section-title">Parcours Académique</h2>
+            
+            <div class="formation-container">
+                <div class="formation-line"></div>
+
+                <div class="formation-card">
+                    <div class="formation-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="formation-info">
+                        <div class="formation-header">
+                            <h4>Master Mathématiques Appliquées, Statistique (DS & IA)</h4>
+                            <span class="formation-date">2024 - Présent</span>
+                        </div>
+                        <p class="formation-univ">Université de Rennes 2 / Rennes, France</p>
+                        <p class="formation-courses">
+                            <strong>Cours :</strong> Machine Learning, Deep Learning, Big Data, Séries Temporelles, Optimisation, Programmation R & Python.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="formation-card">
+                    <div class="formation-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="formation-info">
+                        <div class="formation-header">
+                            <h4>Licence 3 Mathématiques et Informatique Appliquées aux SHS</h4>
+                            <span class="formation-date">2023 - 2024</span>
+                        </div>
+                        <p class="formation-univ">Université de Bretagne Occidentale (UBO) / Brest, France</p>
+                        <p class="formation-courses">
+                            <strong>Cours :</strong> Algèbre, Analyse, Probabilités, Bases de données, Développement Web.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="formation-card">
+                    <div class="formation-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="formation-info">
+                        <div class="formation-header">
+                            <h4>Licence 3 Statistiques parcours Statistiques Économique</h4>
+                            <span class="formation-date">2020 - 2021</span>
+                        </div>
+                        <p class="formation-univ">ENEAM / Cotonou, Bénin</p>
+                        <p class="formation-courses">
+                            <strong>Cours :</strong> Économétrie, Enquêtes Statistiques, Analyse de données, Logiciels statistiques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>      
+
+        <section id="projets" class="section projects-section">
             <h2 class="section-title">Projets sélectionnés</h2>
             
-            <div class="project-block">
-                <h4>Système de recommandation (NLP)</h4>
-                <ul>
-                    <li>Conception d'un chatbot intelligent utilisant le <strong>Vector Search</strong> et les <strong>Embeddings</strong>.</li>
-                    <li>Implémentation de techniques RAG pour améliorer la pertinence des réponses.</li>
-                </ul>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openModal('modal1')">
+                    <img src="img/img_nlp.png" alt="NLP Project" class="project-img">
+                    <div class="project-overlay"><span>Détails du projet</span></div>
+                    <div class="project-brief">
+                        <h4>Système de recommandation culinaire</h4>
+                        <p>NLP & LLM Chatbot</p>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal2')">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Churn Analysis" class="project-img">
+                    <div class="project-overlay"><span>Détails du projet</span></div>
+                    <div class="project-brief">
+                        <h4>Analyse du churn client</h4>
+                        <p>Machine Learning & Power BI</p>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal3')">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487767138-ddf2d67b35c1?q=80&w=1910&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Time Series" class="project-img">
+                    <div class="project-overlay"><span>Détails du projet</span></div>
+                    <div class="project-brief">
+                        <h4>Prédiction de séries temporelles</h4>
+                        <p>Finance & Deep Learning</p>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('modal4')">
+                    <img src="https://media.istockphoto.com/id/2191725702/fr/photo/interface-de-donn%C3%A9es-financi%C3%A8res-affichant-des-graphiques-des-diagrammes-%C3%A0-barres-et-des.jpg?s=1024x1024&w=is&k=20&c=gJalg_Ar6Z6BW5J-Soe_VrnL11hoRKziINSjUGoIfGU=" alt="Automation" class="project-img">
+                    <div class="project-overlay"><span>Détails du projet</span></div>
+                    <div class="project-brief">
+                        <h4>Automatisation de rapports</h4>
+                        <p>R Markdown & Data Viz</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-block">
-                <h4>Prédiction du churn client</h4>
-                <ul>
-                    <li>Développement et comparaison de modèles de classification (Logistique, Random Forest, XGBoost).</li>
-                    <li>Optimisation des performances via la gestion du déséquilibre de classes et validation croisée.</li>
-                </ul>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <img src="img_nlp.png" class="modal-img">
+                    <h4>Système de recommandation culinaire</h4>
+                    <p><strong>Langage :</strong> Python</p>
+                    <p><strong>Packages :</strong> LangChain, OpenAI API, Streamlit, Pandas, NLTK</p>
+                    <div class="modal-desc">
+                        <p>Développement d'un chatbot basé sur Vector Search pour suggérer des recettes à partir de données scrapées.</p>
+                        <ul>
+                            <li>Prétraitement de texte (NLP).</li>
+                            <li>Stockage vectoriel des recettes.</li>
+                            <li>Interface utilisateur interactive.</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/ton-profil/nlp-culinaire" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
 
-            <div class="project-block">
-                <h4>Fiabilisation de données financières</h4>
-                <ul>
-                    <li>Analyse de la robustesse des données de revenus et traitement des données manquantes.</li>
-                    <li>Sélection de variables stratégiques pour appuyer la prise de décision.</li>
-                </ul>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <img src="img_nlp.png" class="modal-img">
+                    <h4>Analyse du churn client</h4>
+                    <p><strong>Langage :</strong> Python, R</p>
+                    <p><strong>Packages :</strong> Scikit-learn, XGBoost, Tidyverse, Power BI</p>
+                    <div class="modal-desc">
+                        <p>Comparaison de modèles de classification pour prédire le départ des clients et identifier les leviers de rétention.</p>
+                        <ul>
+                            <li>Gestion du déséquilibre (SMOTE).</li>
+                            <li>Feature Engineering avancé.</li>
+                            <li>Dashboarding décisionnel.</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/ton-profil/churn-analysis" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">Compétences Techniques</h2>
-            <div class="skills-grid">
-                <p><strong>Langages</strong> : R (tidyverse, tidymodels), Python (Pandas, PySpark), SQL.</p>
-                <p><strong>Machine Learning</strong> : scikit-learn, TensorFlow, PyTorch.</p>
-                <p><strong>NLP & Generative AI</strong> : Transformers (Hugging Face), RAG, spaCy, NLTK.</p>
-                <p><strong>Visualisation</strong> : Power BI, Tableau, Matplotlib, Seaborn, Streamlit.</p>
-                <p><strong>MLOps</strong> : Git, GitHub, GitLab.</p>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <img src="img_nlp.png" class="modal-img">
+                    <h4>Prédiction de séries temporelles</h4>
+                    <p><strong>Langage :</strong> Python, R</p>
+                    <p><strong>Packages :</strong> Statsmodels, Prophet, TensorFlow, ggplot2</p>
+                    <div class="modal-desc">
+                        <p>Analyse et prédiction de tendances financières en utilisant des approches hybrides statistiques et neuronales.</p>
+                        <ul>
+                            <li>Modélisation ARIMA pour les tendances.</li>
+                            <li>Architecture LSTM pour la prédiction long terme.</li>
+                            <li>Tests de stationnarité et saisonnalité.</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/ton-profil/time-series" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">Formation</h2>
-            <ul class="no-bullets">
-                <li><strong>Master Mathématiques Appliquées (Data Science & IA)</strong> — Université de Rennes 2 (En cours).</li>
-                <li><strong>Licence MIASHS (Mathématiques-Économie)</strong> — Université de Bretagne Occidentale.</li>
-                <li><strong>Licence Statistiques</strong> — ENEAM, Cotonou.</li>
-            </ul>
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <img src="img_nlp.png" class="modal-img">
+                    <h4>Automatisation de rapports</h4>
+                    <p><strong>Langage :</strong> R, SQL</p>
+                    <p><strong>Packages :</strong> R Markdown, Knitr, Dplyr, Plotly</p>
+                    <div class="modal-desc">
+                        <p>Mise en place d'un flux de travail automatisé pour la génération de synthèses statistiques reproductibles.</p>
+                        <ul>
+                            <li>Scripts d'imputation automatique.</li>
+                            <li>Génération de PDF/HTML dynamiques.</li>
+                            <li>Visualisations interactives.</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/ton-profil/r-automation" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="section contact-section">
-            <h2 class="section-title">Me contacter</h2>
-            <p><strong>Email</strong> : mitossedes@gmail.com</p>
-            <p><strong>Localisation</strong> : Rennes, France</p>
-            <p><strong>LinkedIn</strong> : <a href="https://www.linkedin.com/in/sephora-mitossede-a4b62a346/">Séphora MITOSSEDE</a></p>
-            <p><strong>GitHub</strong> : <a href="https://github.com/Sephora-MITOSSEDE">Sephora-MITOSSEDE</a></p>
+            <h2 class="section-title">Contactez-moi</h2>
+            <p class="section-subtitle">Vous avez un poste pour moi ? N'hésitez pas à me contacter !</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <p class="label">Email</p>
+                    <a href="mailto:mitossedes@gmail.com" class="contact-link">mitossedes@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <p class="label">Téléphone</p>
+                    <span class="contact-text">+33 6 05 73 21 29</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                    <p class="label">Localisation</p>
+                    <span class="contact-text">Rennes, France</span>
+                </div>
+            </div>
+
+            <div class="social-container">
+                <h3>Retrouvez-moi sur</h3>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/ton-profil" target="_blank" class="social-btn linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ton-profil" target="_blank" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta-contact">
+                <a href="mailto:mitossedes@gmail.com" class="main-contact-btn">
+                    <i class="fas fa-paper-plane"></i> Envoyer un email
+                </a>
+            </div>
         </section>
 
-    </div>
+        <footer>
+            <p>&copy; 2026 Séphora MITOSSEDE — Tous droits réservés.</p>
+        </footer>
 
-    <footer>
-        <p>&copy; 2026 Séphora MITOSSEDE</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

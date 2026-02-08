@@ -1,40 +1,890 @@
+/* POLICE ET CONFIGURATION GÉNÉRALE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+    --dark-blue: #0a2540;   
+    --accent-blue: #4285f4; 
+    --text-white: #ffffff;
+    --bg-page: #f8fafd;     
+}
+
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; background-color: #fff; }
 
-.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-page); 
+    letter-spacing: -0.01em;
+    color: #333; 
+    scroll-behavior: smooth; 
+}
 
-/* HERO SECTION - Style Binnie */
+/* BARRE DE NAVIGATION */
+.navbar {
+    background: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--accent-blue); 
+    text-decoration: none; 
+}
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { 
+    text-decoration: none; 
+    color: #555; 
+    font-weight: 500; 
+    font-size: 1rem; 
+    transition: 0.3s; 
+}
+
+.nav-links a:hover { color: var(--accent-blue); }
+
+/*  HAUT DE PAGE */
 .hero {
-    height: 100vh;
-    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh; /* Pour qu'il descende bien comme tu le souhaites */
+    /* On met ton image en fond avec un dégradé sombre par-dessus */
+    background: linear-gradient(rgba(10, 37, 64, 0.6), rgba(10, 37, 64, 0.6)), 
+                url('https://media.istockphoto.com/id/2193247029/fr/photo/l%C3%A9quipe-dentreprise-analyse-de-tableaux-de-bord-num%C3%A9riques-interactifs-%C3%A0-laide-de.webp?s=2048x2048&w=is&k=20&c=ipo3OIw08dvVskcMi9FNILYREqLFmJTCdQLkkZoInFs=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Petit effet de mouvement quand on scrolle */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--text-white);
+}
+
+.hero-content { 
+    max-width: 1000px; 
+    padding: 0 20px; 
+}
+
+.greeting { 
+    font-size: 1.8rem; 
+    font-weight: 400; 
+    margin-bottom: 10px; 
+    opacity: 0.9; 
+}
+
+/* NAME */
+.main-name { 
+    font-size: 5rem; 
+    font-weight: 800; 
+    margin-bottom: 20px; 
+    letter-spacing: -2px; 
+    line-height: 1.1;
+}
+
+.main-title { 
+    font-size: 1.6rem; 
+    font-weight: 600; 
+    margin-bottom: 15px; 
+}
+
+.main-subtitle { 
+    font-size: 1.2rem; 
+    font-weight: 300; 
+    opacity: 0.8; 
+    margin-bottom: 45px; 
+}
+
+/* BOUTONS ARRONDIS */
+.hero-buttons { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.btn-fill, .btn-outline {
+    padding: 16px 38px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-fill { 
+    background: var(--accent-blue); 
+    color: white; 
+}
+
+.btn-outline { 
+    border: 2px solid white; 
+    color: white; 
+}
+
+.btn-fill:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.btn-outline:hover { background: white; color: var(--dark-blue); }
+
+/* ESPACEMENT POUR LA SUITE DE LA PAGE */
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 80px 20px; 
+}
+
+
+
+/* --- SECTION À PROPOS --- */
+
+/* Titre  */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
     position: relative;
-}
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
-.hero-content { z-index: 1; padding: 20px; }
-.hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; }
-.hero h3 { font-size: 1.5rem; font-weight: 300; margin-bottom: 20px; }
-
-/* SECTIONS - Style Fariza (Épuré) */
-.section { padding: 60px 0; border-bottom: 1px solid #eee; }
-.section-title { font-size: 1.8rem; margin-bottom: 30px; color: #000; text-transform: uppercase; letter-spacing: 1px; }
-
-.experience-block, .project-block { margin-bottom: 40px; }
-.experience-block h4, .project-block h4 { font-size: 1.3rem; margin-bottom: 5px; color: #2c3e50; }
-.meta { font-style: italic; color: #7f8c8d; margin-bottom: 10px; }
-
-ul { margin-left: 20px; margin-bottom: 15px; }
-li { margin-bottom: 8px; }
-.no-bullets { list-style: none; margin-left: 0; }
-
-.btn-primary { 
-    display: inline-block; padding: 12px 30px; background: #fff; color: #000; 
-    text-decoration: none; font-weight: 600; border-radius: 5px; margin-top: 20px;
+    padding-bottom: 15px;
 }
 
-.contact-section a { color: #3498db; text-decoration: underline; }
-footer { text-align: center; padding: 40px; color: #999; font-size: 0.9rem; }
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent-blue);
+    border-radius: 2px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Image */
+.about-image img {
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.about-info p {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Les petites boîtes  */
+.info-box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-box i {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    background: #f0f7ff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Bouton télécharger */
+.btn-cv {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-cv:hover {
+    background: #357ae8;
+    transform: translateY(-3px);
+}
+
+
+
+/* --- SECTION EXPERTISES --- */
+.expertise-section {
+    padding: 100px 0;
+    margin-top: 50px;
+}
+
+/* GRILLE DE COMPÉTENCES (3 colonnes larges) */
+.skills-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* CARTES SKILLS (Même style que les projets) */
+.skill-card {
+    position: relative;
+    height: 250px; /* On augmente un peu la hauteur pour le look large */
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #f0f2f5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Ombre légère pro */
+    transition: transform 0.3s ease;
+}
+
+.skill-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* EFFET AU SURVOL (Overlay Bleu Marine transparent) */
+.skill-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 37, 64, 0.85); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.skill-overlay h4 {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+}
+
+.skill-card:hover .skill-overlay { opacity: 1; }
+.skill-card:hover img { transform: scale(1.1); }
+.skill-card:hover { transform: translateY(-10px); } /* Soulèvement comme projets */
+
+/* --- SYSTÈME DE FENÊTRE (MODALE) --- */
+.modal-bg {
+    display: none;
+    position: fixed;
+    z-index: 3000; /* Très haut pour passer devant tout */
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 8% auto;
+    padding: 45px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    text-align: left; /* Aligné à gauche pour la lisibilité */
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn { 
+    from { transform: scale(0.8); opacity: 0; } 
+    to { transform: scale(1); opacity: 1; } 
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 25px;
+    font-size: 35px; 
+    cursor: pointer; 
+    color: #333;
+    transition: 0.3s;
+}
+
+.close-btn:hover { color: #4285f4; }
+
+/* --- CONTENU DE LA FENÊTRE --- */
+
+/* TITRE EN BLEU CIEL */
+#modal-body h3 { 
+    color: #4285f4 !important; 
+    margin-bottom: 25px; 
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-bottom: 2px solid #4285f4; /* Trait bleu sous le titre */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+#modal-body ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-top: 10px;
+}
+
+#modal-body li { 
+    padding: 15px 0; 
+    border-bottom: 1px solid #f0f2f5; 
+    font-size: 1.1rem;
+    color: #444;
+    position: relative;
+    padding-left: 30px;
+}
+
+#modal-body li:last-child { border-bottom: none; }
+
+/* PETITE PUCE BLEU CIEL */
+#modal-body li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4285f4;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .skills-portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+    .skills-portfolio-grid { grid-template-columns: 1fr; }
+    .modal-content { padding: 30px; width: 95%; margin-top: 20%; }
+}
+
+
+/* --- TIMELINE EXPÉRIENCES PRO --- */
+.timeline-v2 {
+    position: relative;
+    max-width: 1300px;
+    margin: 80px auto;
+}
+
+/* Ligne centrale */
+.timeline-v2::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #d0e1fd;
+    top: 0; bottom: 0; left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+    min-height: 160px; 
+}
+
+/* LOGO GÉANT  */
+.timeline-logo {
+    position: absolute;
+    width: 160px; 
+    height: 160px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 4px solid #4285f4; 
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(66, 133, 244, 0.2);
+}
+
+.timeline-logo img { width: 70%; height: auto; object-fit: contain; }
+
+/* CONTENU DES BOÎTES */
+.timeline-content {
+    background-color: white;
+    padding: 25px 35px; /* Même padding que les formations */
+    border-radius: 15px; /* Même arrondi */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Même ombre légère */
+    border: 1px solid #f0f2f5; /* Même bordure subtile */
+    width: 42%; 
+    position: relative;
+    transition: all 0.3s ease; /* Pour ajouter l'effet de douceur */
+}
+
+.left .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+    left: 0; 
+    text-align: right;
+}
+
+.right .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+    right: 0; 
+    text-align: left;
+}
+
+/* ÉLOIGNEMENT DU LOGO */
+.timeline-item.left, .timeline-item.right {
+    display: flex;
+}
+.left { justify-content: flex-start; }
+.right { justify-content: flex-end; }
+
+/* TITRES SANS COUPURE */
+.timeline-content h4 {
+    color:  #4285f4;
+    font-size: 1.3rem; /* Comme formation */
+    font-weight: 700; /* Comme formation, moins lourd que 800 */
+    margin-bottom: 8px;
+    line-height: 1.3;
+    /* On enlève le nowrap pour que ce soit plus naturel */
+}
+
+.loc { 
+    color: #0a2540; 
+    font-weight: 700; 
+    font-size: 1.05rem; /* Comme formation-univ */
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+/* --- STYLE DE LA LISTE DE MISSIONS --- */
+.mission-list {
+    list-style: none; /* C'EST ÇA QUI ENLÈVE LE DEUXIÈME POINT */
+    padding: 0;
+    margin: 0;
+}
+
+.mission-list li {
+    font-size: 0.95rem; 
+    margin-bottom: 8px;
+    color: #555; 
+    line-height: 1.5;
+    text-align: left; 
+    position: relative;
+    padding-left: 20px; /* On laisse de la place pour notre puce bleue */
+}
+
+/* Notre puce bleue personnalisée (l'unique !) */
+.mission-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4285f4; /* Ton bleu ciel */
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Optionnel : Ajoute l'effet de zoom des formations sur tes expériences */
+.timeline-content:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #4285f4;
+    box-shadow: 0 15px 30px rgba(66, 133, 244, 0.15);
+}
+
+
+/* --- SECTION FORMATION --- */
+.formation-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.formation-container {
+    max-width: 950px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative; 
+}
+
+/*  */
+.formation-line {
+    position: absolute;
+    width: 2px;
+    background-color: #e0e0e0; 
+    top: 0;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1; 
+}
+
+.formation-card {
+    background: #fff;
+    padding: 25px 35px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid #f0f2f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    position: relative;
+    z-index: 2; 
+}
+
+/* L'EFFET ZOOM AU SURVOL */
+.formation-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(66, 133, 244, 0.15);
+    border-color: #4285f4; 
+}
+
+
+.formation-icon {
+    width: 65px;
+    height: 65px;
+    background: #f0f7ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4285f4;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.formation-card:hover .formation-icon {
+    background: #4285f4;
+    color: #fff;
+}
+
+.formation-info { flex: 1; }
+
+.formation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.formation-header h4 {
+    font-size: 1.3rem;
+    color: #0a2540;
+    font-weight: 700;
+    margin: 0;
+}
+
+.formation-date {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    font-weight: 600;
+}
+
+.formation-univ {
+    color: #4285f4; 
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.formation-courses {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+    border-top: 1px solid #f0f2f5;
+    padding-top: 10px;
+}
+
+.formation-courses strong { color: #4285f4; font-weight: 700; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formation-line { display: none; }
+    .formation-card { flex-direction: column; text-align: center; }
+    .formation-header { flex-direction: column; gap: 10px; }
+}
+
+
+
+/* GRILLE PROJETS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover { transform: translateY(-10px); }
+
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 250px;
+    background: rgba(66, 133, 244, 0.85);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: bold; opacity: 0; transition: 0.3s;
+}
+
+.project-card:hover .project-overlay { opacity: 1; }
+
+.project-brief { padding: 20px; text-align: left; }
+.project-brief h4 { color: #4285f4;; margin-bottom: 5px; }
+
+/* MODALES */
+.modal {
+    display: none; position: fixed; z-index: 2000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white; margin: 5% auto; padding: 30px;
+    border-radius: 20px; width: 90%; max-width: 700px;
+    position: relative; text-align: left;
+}
+
+/* DANS LA MODALE */
+.modal-content h4 {
+    color: #4285f4; 
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* POUR LES SOUS-TITRES (Langages, Packages) */
+.modal-content p strong {
+    color: #4285f4; 
+}
+
+.modal-img {
+    width: 100%; height: 300px; object-fit: cover;
+    border-radius: 15px; margin-bottom: 20px;
+}
+
+/* --- STYLE DU BLOC DESCRIPTION DANS LA MODALE --- */
+.modal-desc {
+    margin: 25px 0;
+    text-align: left;
+}
+
+/* Le paragraphe de description en haut */
+.modal-desc p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* LE TRAIT BLEU CIEL SÉPARATEUR */
+.modal-desc ul {
+    list-style: none;
+    padding: 20px 0 0 0;
+    margin: 0;
+    
+    border-top: 2px solid #4285f4; 
+}
+
+/* Style des points de la liste */
+.modal-desc li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Les petites puces personnalisées en bleu ciel */
+.modal-desc li::before {
+    content: "→"; 
+    position: absolute;
+    left: 0;
+    color: #4285f4;
+    font-weight: bold;
+}
+
+.github-btn {
+    display: inline-block; background: #333; color: white !important;
+    padding: 12px 25px; border-radius: 8px; text-decoration: none;
+    font-weight: bold; transition: 0.3s;
+}
+
+.github-btn:hover { background: #4285f4; }
+.close { position: absolute; right: 25px; top: 15px; font-size: 30px; cursor: pointer; }
+
+
+/* --- SECTION CONTACT --- */
+.contact-section {
+    padding: 100px 0 60px 0;
+    text-align: center;
+    background-color: #fcfdfe; 
+}
+
+.section-subtitle {
+    color: #888;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f0f2f5;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #4285f4; 
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: 700;
+    color: #0a2540;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.contact-link, .contact-text {
+    color: #555;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* --- RÉSEAUX SOCIAUX --- */
+.social-container h3 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    color: #0a2540;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: white;
+    color: #333;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background: #4285f4;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --- BOUTON FINAL --- */
+.main-contact-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background: #4285f4;
+    color: white !important;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(66, 133, 244, 0.3);
+    transition: 0.3s;
+}
+
+.main-contact-btn:hover {
+    background: #3367d6;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(66, 133, 244, 0.4);
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 40px;
+    border-top: 1px solid #eee;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
