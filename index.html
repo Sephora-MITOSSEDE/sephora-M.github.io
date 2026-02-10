@@ -6,7 +6,7 @@
     <title>Séphora MITOSSEDE | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,7 +15,8 @@
     <title>Séphora MITOSSEDE | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -79,103 +80,124 @@
             </div>
         </section>
 
-        <section id="expertises" class="section expertise-section">
-            <h2 class="section-title">Expertises & Solutions Data</h2>
-            <div class="skills-portfolio-grid">
-                
-                <div class="skill-card" onclick="openModal('modal-prog')">
-                    <div class="skill-overlay"><h4>Programmation & Outils</h4></div>
-                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500" alt="Code">
-                </div>
 
-                <div class="skill-card" onclick="openModal('modal-ml')">
-                    <div class="skill-overlay"><h4>Machine Learning</h4></div>
-                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=500" alt="IA">
-                </div>
+        <section id="expertises" class="section expertise-v3">
+            <h2 class="section-title" data-aos="fade-up">Expertises & Solutions Data</h2>
 
-                <div class="skill-card" onclick="openModal('modal-nlp')">
-                    <div class="skill-overlay"><h4>NLP & IA Générative</h4></div>
+            <div class="expertise-container">
+                <div class="expertise-illustration" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Analyse de données">
+                </div>
+                <div class="expertise-text" data-aos="fade-left">
+                    <h3>Analyse de données & modélisation statistique</h3>
+                    <div class="skill-tags">
+                        <span>Python (Pandas, NumPy, Statsmodels)</span>
+                        <span>R (tidyverse)</span>
+                        <span>SQL</span>
+                    </div>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-bolt"></i> Explorer, nettoyer et structurer des données pour répondre à des problématiques métier.</li>
+                        <li><i class="fas fa-bolt"></i> Construire et interpréter des modèles statistiques (régressions, tests, séries temporelles).</li>
+                        <li><i class="fas fa-bolt"></i> Analyser les résultats avec esprit critique et les rendre compréhensibles.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="expertise-container reverse">
+                <div class="expertise-text" data-aos="fade-right">
+                    <h3>Machine Learning & modélisation prédictive</h3>
+                    <div class="skill-tags">
+                        <span>Python (scikit-learn, XGBoost)</span>
+                        <span>R (tidymodels)</span>
+                        <span>TensorFlow, PyTorch</span>
+                    </div>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-bolt"></i> Développer des modèles de classification, régression et prévision.</li>
+                        <li><i class="fas fa-bolt"></i> Gérer le déséquilibre des classes, la sélection de variables et l’évaluation.</li>
+                        <li><i class="fas fa-bolt"></i> Optimiser et interpréter les modèles pour un usage opérationnel.</li>
+                    </ul>
+                </div>
+                <div class="expertise-illustration" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=500" alt="Machine Learning">
+                </div>
+            </div>
+
+            <div class="expertise-container">
+                <div class="expertise-illustration" data-aos="fade-right">
                     <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500" alt="NLP">
                 </div>
-
-                <div class="skill-card" onclick="openModal('modal-cloud')">
-                    <div class="skill-overlay"><h4>Cloud & Big Data</h4></div>
-                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500" alt="Cloud">
+                <div class="expertise-text" data-aos="fade-left">
+                    <h3>NLP & Intelligence Artificielle</h3>
+                    <div class="skill-tags">
+                        <span>Python (spaCy, NLTK, Transformers)</span>
+                        <span>LLM & embeddings</span>
+                        <span>APIs IA générative</span>
+                    </div>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-bolt"></i> Traiter et analyser des données textuelles (nettoyage, vectorisation, embeddings).</li>
+                        <li><i class="fas fa-bolt"></i> Mettre en œuvre des solutions NLP : analyse de sentiments, classification.</li>
+                        <li><i class="fas fa-bolt"></i> Concevoir des assistants intelligents basés sur des modèles de langage (LLM).</li>
+                    </ul>
                 </div>
-
-                <div class="skill-card" onclick="openModal('modal-viz')">
-                    <div class="skill-overlay"><h4>Visualisation & BI</h4></div>
-                    <img src="https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stats">
-                </div>
-
-                <div class="skill-card" onclick="openModal('modal-mlops')">
-                    <div class="skill-overlay"><h4>MLOps & Soft Skills</h4></div>
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500" alt="Team">
-                </div>
-
             </div>
-        </section>
 
-        <div id="modal-container" class="modal-bg" onclick="closeModal()">
-            <div class="modal-content" onclick="event.stopPropagation()">
-                <span class="close-btn" onclick="closeModal()">&times;</span>
-                <div id="modal-body"></div>
+            <div class="expertise-container reverse">
+                <div class="expertise-text" data-aos="fade-right">
+                    <h3>Cloud & Big Data</h3>
+                    <div class="skill-tags">
+                        <span>PySpark</span>
+                        <span>Environnements cloud</span>
+                        <span>Stockage distribué</span>
+                    </div>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-bolt"></i> Traiter et analyser des volumes de données importants.</li>
+                        <li><i class="fas fa-bolt"></i> Concevoir des workflows data scalables et reproductibles.</li>
+                        <li><i class="fas fa-bolt"></i> Adapter les solutions data à des environnements distribués.</li>
+                    </ul>
+                </div>
+                <div class="expertise-illustration" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500" alt="Big Data">
+                </div>
             </div>
-        </div>
 
-        <div id="content-prog" style="display:none;">
-            <h3>Programmation & Outils</h3>
-            <ul>
-                <li>R (tidyverse, tidymodels)</li>
-                <li>Python (Pandas, PySpark, NumPy, statsmodels)</li>
-                <li>SQL</li>
-            </ul>
-        </div>
+            <div class="expertise-container">
+                <div class="expertise-illustration" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Data Viz">
+                </div>
+                <div class="expertise-text" data-aos="fade-left">
+                    <h3>Visualisation & Data storytelling</h3>
+                    <div class="skill-tags">
+                        <span>Power BI & Tableau</span>
+                        <span>Matplotlib, Seaborn</span>
+                        <span>R (ggplot2)</span>
+                    </div>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-bolt"></i> Concevoir des tableaux de bord interactifs orientés décision.</li>
+                        <li><i class="fas fa-bolt"></i> Transformer des analyses complexes en messages clairs et visuels.</li>
+                        <li><i class="fas fa-bolt"></i> Aider les décideurs à suivre les indicateurs clés et tendances.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div id="content-ml" style="display:none;">
-            <h3>Machine Learning & Deep Learning</h3>
-            <ul>
-                <li>Scikit-learn, TensorFlow, Keras, PyTorch</li>
-                <li>Modélisation prédictive (Random Forest, LASSO, Régularisation)</li>
-                <li>Fiabilisation de données complexes</li>
-            </ul>
-        </div>
-
-        <div id="content-nlp" style="display:none;">
-            <h3>NLP & IA Générative</h3>
-            <ul>
-                <li>LLMs & Transformers (Hugging Face)</li>
-                <li>RAG (Retrieval-Augmented Generation) & Embeddings</li>
-                <li>spaCy, NLTK, analyse de sentiments</li>
-            </ul>
-        </div>
-
-        <div id="content-cloud" style="display:none;">
-            <h3>Cloud & Big Data</h3>
-            <ul>
-                <li>Google Cloud Platform (GCP)</li>
-                <li>Google Cloud Storage</li>
-                <li>Exploitation de bases de données massives</li>
-            </ul>
-        </div>
-
-        <div id="content-viz" style="display:none;">
-            <h3>Visualisation & Data Apps</h3>
-            <ul>
-                <li>Power BI & Tableau</li>
-                <li>Matplotlib, Seaborn</li>
-                <li>Data apps : RShiny, Streamlit, Flask (API REST)</li>
-            </ul>
-        </div>
-
-        <div id="content-mlops" style="display:none;">
-            <h3>MLOps & Soft Skills</h3>
-            <ul>
-                <li>Versioning : Git, GitHub, GitLab</li>
-                <li>Rigueur et esprit analytique</li>
-                <li>Esprit d'équipe et communication technique</li>
-            </ul>
-        </div>
+            <div class="expertise-container reverse">
+                <div class="expertise-text" data-aos="fade-right">
+                    <h3>Soft Skills & Méthodologie</h3>
+                    <div class="skill-tags">
+                        <span>Git & GitHub</span>
+                        <span>Méthodologies analytiques</span>
+                        <span>Vulgarisation</span>
+                    </div>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-bolt"></i> Travailler de manière structurée, rigoureuse et autonome.</li>
+                        <li><i class="fas fa-bolt"></i> Communiquer efficacement avec des profils techniques et métiers.</li>
+                        <li><i class="fas fa-bolt"></i> Documenter, versionner et maintenir des projets data.</li>
+                    </ul>
+                </div>
+                <div class="expertise-illustration" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500" alt="Soft Skills">
+                </div>
+            </div>
+        </section>        
 
 
         <section id="experiences" class="section">
@@ -422,6 +444,22 @@
             </div>
         </section>
 
+
+        <div id="ai-chat-container" class="chat-closed">
+            <div class="chat-header" onclick="toggleChat()">
+                <i class="fas fa-robot"></i>
+                <span>Posez une question à mon IA</span>
+                <i class="fas fa-chevron-up" id="chat-icon"></i>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="ai-msg">Bonjour Séphora ! Je connais tout sur le parcours de Séphora. Que voulez-vous savoir ?</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="user-input" placeholder="Son expérience à l'INSEE ?">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>        
+
         <section id="contact" class="section contact-section">
             <h2 class="section-title">Contactez-moi</h2>
             <p class="section-subtitle">Vous avez un poste pour moi ? N'hésitez pas à me contacter !</p>
@@ -470,5 +508,15 @@
         </footer>
 
     <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+    <script src="script.js"></script>
+
 </body>
 </html>
