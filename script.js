@@ -1,48 +1,147 @@
-// --- FONCTION UNIQUE POUR TOUTES LES MODALES ---
-function openModal(id) {
-    // Cas 1 : C'est une expertise (ex: modal-prog)
-    if (id.startsWith('modal-')) {
-        const modalContainer = document.getElementById('modal-container');
-        const modalBody = document.getElementById('modal-body');
-        
-        // On récupère le suffixe (ex: prog, ml, nlp)
-        const type = id.split('-')[1]; 
-        const contentId = 'content-' + type;
-        const sourceContent = document.getElementById(contentId);
+/* =========================
+   MODALES PROJETS
+   ========================= */
 
-        if (sourceContent && modalBody) {
-            modalBody.innerHTML = sourceContent.innerHTML;
-            modalContainer.style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-    } 
-    // Cas 2 : C'est un projet (ex: modal1, modal2)
-    else {
-        const modal = document.getElementById(id);
-        if (modal) {
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
-    }
+function openProjectModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    modal.classList.add("show");
+    document.body.style.overflow = "hidden";
 }
 
-// --- FONCTION DE FERMETURE ---
-function closeModal(id) {
-    // Si un ID est passé (Projets)
-    if (id) {
-        document.getElementById(id).style.display = "none";
-    } 
-    // Sinon on ferme le container global (Expertises)
-    else {
-        document.getElementById('modal-container').style.display = "none";
-    }
+function closeProjectModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    modal.classList.remove("show");
     document.body.style.overflow = "auto";
 }
 
-// Fermeture au clic à l'extérieur
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal-bg') || event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
+/* fermeture au clic sur le fond */
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("project-modal-overlay")) {
+        e.target.classList.remove("show");
         document.body.style.overflow = "auto";
     }
+});
+
+/* fermeture avec Échap */
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        document.querySelectorAll(".project-modal-overlay.show").forEach((modal) => {
+            modal.classList.remove("show");
+        });
+        document.body.style.overflow = "auto";
+    }
+});
+
+
+/* =========================
+   CHAT IA
+   ========================= */
+
+function toggleChat() {
+    const container = document.getElementById("ai-chat-container");
+    if (!container) return;
+
+    container.classList.toggle("chat-closed");
+    container.classList.toggle("chat-open");
 }
+
+
+/* =========================
+   EXPERTISES
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const groups = document.querySelectorAll(".expertise-group");
+
+    groups.forEach((group) => {
+        const boxes = group.querySelectorAll(".expertise-box");
+
+        function closeGroup() {
+            boxes.forEach((box) => {
+                const back = box.querySelector(".expertise-box-back");
+                box.classList.remove("active");
+                if (back) {
+                    back.style.maxHeight = null;
+                }
+            });
+        }
+
+        function openGroup(activeBox) {
+            boxes.forEach((box) => {
+                const back = box.querySelector(".expertise-box-back");
+                if (!back) return;
+
+                if (box === activeBox) {
+                    box.classList.add("active");
+                    back.style.maxHeight = back.scrollHeight + "px";
+                } else {
+                    box.classList.remove("active");
+                    back.style.maxHeight = null;
+                }
+            });
+        }
+
+        boxes.forEach((box) => {
+            const button = box.querySelector(".expertise-plus");
+            if (!button) return;
+
+            button.addEventListener("click", function (e) {
+                e.stopPropagation();
+
+                const alreadyActive = box.classList.contains("active");
+
+                if (alreadyActive) {
+                    closeGroup();
+                } else {
+                    openGroup(box);
+                }
+            });
+        });
+    });
+});
+
+/* =========================
+   ANIMATION APPARITION CARDS PROJETS
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".project-reveal");
+    if (!cards.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("is-visible");
+                }, index * 90);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.18
+    });
+
+    cards.forEach((card) => observer.observe(card));
+});
+
+
+/* =========================
+   HERO BACKGROUND SLIDESHOW
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".hero-slide");
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+
+    setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+    }, 1000);
+});
