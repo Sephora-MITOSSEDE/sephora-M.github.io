@@ -1821,14 +1821,24 @@ body {
 
 /* --- FOOTER --- */
 footer {
-    padding: 40px;
-    border-top: 1px solid #eee;
-    color: #aaa;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #e3ebf7;
 }
 
+footer p {
+  font-size: 0.9rem;
+  color: #4285f4;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
 
-
+footer p:hover {
+  opacity: 1;
+  letter-spacing: 0.6px;
+}
 
 
 
