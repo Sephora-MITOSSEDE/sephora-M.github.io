@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Séphora MITOSSEDE | Portfolio</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -29,17 +25,26 @@
             </ul>
         </div>
     </nav>
-
         <section class="hero" id="home">
+            <div class="hero-slides">
+                <div class="hero-slide active" style="background-image: url('https://i.pinimg.com/736x/98/cf/c6/98cfc6d00332ee28072d98c747f8234f.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://i.pinimg.com/1200x/53/10/35/531035dd2abaf8172bff98d27abd5626.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://i.pinimg.com/1200x/96/93/3c/96933c7af8e74cb5b2c7718e94598a52.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://i.pinimg.com/736x/3c/d7/5a/3cd75a2eea3d208f13e478cdd3b6881a.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('https://i.pinimg.com/1200x/6e/f5/14/6ef5143046b8c717f9f61809d2a9ed73.jpg');"></div>
+            </div>
+
+            <div class="hero-overlay"></div>
+
             <div class="hero-content">
-                <p class="greeting">Bonjour, je suis</p>
-                <h1 class="main-name">Séphora MITOSSEDE</h1>
-                <p class="main-title">Data Scientist | Data Analyst</p>
-                <p class="main-subtitle">Statistiques, Machine Learning & NLP</p>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn-fill">Découvrir mon profil</a>
-                    <a href="#contact" class="btn-outline">Me contacter</a>
-                </div>
+                <h1 class="main-name">
+                    La donnée au service<br>de la décision.
+                </h1>
+
+                <p class="main-title">
+                    <span class="slash">//</span> Data Analyst
+                    <span class="slash">//</span> Data Scientist
+                </p>
             </div>
         </section>
 
@@ -54,9 +59,17 @@
                 </div>
 
                 <div class="about-info">
-                    <h3>Bienvenue sur mon portfolio</h3>
-                    <p>Je suis <strong>Data Scientist / Data Analyst</strong>, spécialisée en statistiques appliquées et fiabilisation de données complexes. Mon expertise me permet de transformer des données brutes en indicateurs stratégiques et en outils d'aide à la décision.</p>
                     
+                    
+                    <p>
+                        Spécialisée en analyse statistique et machine learning, 
+                        je conçois des solutions data pour transformer les données en leviers de décision. 
+                        Mon profil allie rigueur quantitative, maîtrise des outils data et compréhension des enjeux métiers, 
+                        avec une intervention sur l’ensemble de la chaîne de valeur, de la préparation des données 
+                        à la modélisation et à la restitution des résultats.
+                    </p>
+                    
+
                     <div class="info-box-container">
                         <div class="info-box">
                             <i class="fas fa-envelope"></i>
@@ -75,195 +88,698 @@
             </div>
         </section>
 
-
         <section id="expertises" class="section expertise-v3">
             <h2 class="section-title" data-aos="fade-up">Expertises & Solutions Data</h2>
 
-            <div class="expertise-container">
-                <div class="expertise-illustration" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Analyse de données">
-                </div>
-                <div class="expertise-text" data-aos="fade-left">
-                    <h3>Analyse de données & modélisation statistique</h3>
-                    <div class="skill-tags">
-                        <span>Python (Pandas, NumPy, Statsmodels)</span>
-                        <span>R (tidyverse)</span>
-                        <span>SQL</span>
+            <div class="expertise-group">
+                <div class="expertise-grid">
+
+                    <!-- 1 -->
+                    <div class="expertise-box" data-aos="fade-up">
+                        <div class="expertise-box-front">
+                            <div class="expertise-box-overlay"></div>
+                            <div class="expertise-box-content">
+                                <div class="expertise-number">1</div>
+                                
+                                <h3>Statistique et Modélisation</h3>
+                                <button class="expertise-plus" type="button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="expertise-box-back">
+                            <div class="expertise-back-content">
+                                <p class="expertise-label">Stack</p>
+                                <ul>
+                                    <li>Python (Pandas, NumPy, Statsmodels)</li>
+                                    <li>R (tidyverse)</li>
+                                    <li>SQL</li>
+                                </ul>
+
+                                <p class="expertise-label">Compétences</p>
+                                <ul>
+                                    <li>Modèles statistiques et économétriques</li>
+                                    <li>Inférence et tests statistiques</li>
+                                    <li>Analyse de résidus et interprétation</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-bolt"></i> Explorer, nettoyer et structurer des données pour répondre à des problématiques métier.</li>
-                        <li><i class="fas fa-bolt"></i> Construire et interpréter des modèles statistiques (régressions, tests, séries temporelles).</li>
-                        <li><i class="fas fa-bolt"></i> Analyser les résultats avec esprit critique et les rendre compréhensibles.</li>
-                    </ul>
+
+                    <!-- 2 -->
+                    <div class="expertise-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="expertise-box-front">
+                            <div class="expertise-box-overlay"></div>
+                            <div class="expertise-box-content">
+                                <div class="expertise-number">2</div>
+                                
+                                <h3>Machine Learning & modélisation prédictive</h3>
+                                <button class="expertise-plus" type="button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="expertise-box-back">
+                            <div class="expertise-back-content">
+                                <p class="expertise-label">Stack</p>
+                                <ul>
+                                    <li>Python (scikit-learn, XGBoost)</li>
+                                    <li>R (tidymodels)</li>
+                                    <li>TensorFlow, PyTorch</li>
+                                </ul>
+
+                                <p class="expertise-label">Compétences</p>
+                                <ul>
+                                    <li>Classification, régression, prévision</li>
+                                    <li>Gestion du déséquilibre des classes</li>
+                                    <li>Évaluation et interprétation des modèles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="expertise-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="expertise-box-front">
+                            <div class="expertise-box-overlay"></div>
+                            <div class="expertise-box-content">
+                                <div class="expertise-number">3</div>
+                                
+                                <h3>NLP & Intelligence Artificielle</h3>
+                                <button class="expertise-plus" type="button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="expertise-box-back">
+                            <div class="expertise-back-content">
+                                <p class="expertise-label">Stack</p>
+                                <ul>
+                                    <li>Python (spaCy, NLTK, Transformers)</li>
+                                    <li>LLM & embeddings</li>
+                                    <li>APIs IA générative</li>
+                                </ul>
+
+                                <p class="expertise-label">Compétences</p>
+                                <ul>
+                                    <li>Analyse de textes et vectorisation</li>
+                                    <li>Analyse de sentiments, classification</li>
+                                    <li>Conception d’assistants intelligents</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="expertise-container reverse">
-                <div class="expertise-text" data-aos="fade-right">
-                    <h3>Machine Learning & modélisation prédictive</h3>
-                    <div class="skill-tags">
-                        <span>Python (scikit-learn, XGBoost)</span>
-                        <span>R (tidymodels)</span>
-                        <span>TensorFlow, PyTorch</span>
+            <div class="expertise-group">
+                <div class="expertise-grid">
+
+                    <!-- 4 -->
+                    <div class="expertise-box" data-aos="fade-up">
+                        <div class="expertise-box-front">
+                            <div class="expertise-box-overlay"></div>
+                            <div class="expertise-box-content">
+                                <div class="expertise-number">4</div>
+                                
+                                <h3>Cloud & Big Data</h3>
+                                <button class="expertise-plus" type="button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="expertise-box-back">
+                            <div class="expertise-back-content">
+                                <p class="expertise-label">Stack</p>
+                                <ul>
+                                    <li>PySpark</li>
+                                    <li>Environnements cloud</li>
+                                    <li>Stockage distribué</li>
+                                </ul>
+
+                                <p class="expertise-label">Compétences</p>
+                                <ul>
+                                    <li>Traitement de gros volumes</li>
+                                    <li>Workflows data scalables</li>
+                                    <li>Environnements distribués</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-bolt"></i> Développer des modèles de classification, régression et prévision.</li>
-                        <li><i class="fas fa-bolt"></i> Gérer le déséquilibre des classes, la sélection de variables et l’évaluation.</li>
-                        <li><i class="fas fa-bolt"></i> Optimiser et interpréter les modèles pour un usage opérationnel.</li>
-                    </ul>
+
+                    <!-- 5 -->
+                    <div class="expertise-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="expertise-box-front">
+                            <div class="expertise-box-overlay"></div>
+                            <div class="expertise-box-content">
+                                <div class="expertise-number">5</div>
+                                
+                                <h3>Visualisation & Data storytelling</h3>
+                                <button class="expertise-plus" type="button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="expertise-box-back">
+                            <div class="expertise-back-content">
+                                <p class="expertise-label">Stack</p>
+                                <ul>
+                                    <li>Power BI & Tableau</li>
+                                    <li>Matplotlib, Seaborn</li>
+                                    <li>R (ggplot2)</li>
+                                </ul>
+
+                                <p class="expertise-label">Compétences</p>
+                                <ul>
+                                    <li>Tableaux de bord interactifs</li>
+                                    <li>Data storytelling</li>
+                                    <li>Suivi d’indicateurs clés</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="expertise-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="expertise-box-front">
+                            <div class="expertise-box-overlay"></div>
+                            <div class="expertise-box-content">
+                                <div class="expertise-number">6</div>
+                                
+                                <h3>Soft Skills & Méthodologie</h3>
+                                <button class="expertise-plus" type="button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="expertise-box-back">
+                            <div class="expertise-back-content">
+                                <p class="expertise-label">Forces</p>
+                                <ul>
+                                    <li>Rigueur, autonomie, structure</li>
+                                    <li>Communication technique et métier</li>
+                                    <li>Documentation et versionning</li>
+                                </ul>
+
+                                <p class="expertise-label">Approche</p>
+                                <ul>
+                                    <li>Travail analytique reproductible</li>
+                                    <li>Vulgarisation des résultats</li>
+                                    <li>Vision orientée décision</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="expertise-illustration" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=500" alt="Machine Learning">
+            </div>
+        </section>
+        
+        <section id="projets" class="section projects-section">
+            <div class="projects-header">
+                <h2 class="section-title projects-main-title">Projets principaux</h2>
+                <p class="projects-intro">
+                    Une sélection de projets en data analyse, data science et intelligence artificielle appliquée.
+                </p>
+             </div>
+
+            <div class="projects-grid-v2">
+
+                <!-- CARD 1 -->
+                <article class="project-card-v2 project-reveal" onclick="openProjectModal('modal1')">
+                    <div class="project-thumb">
+                        <img src="img/reco_cuisine.png" alt="Système de recommandation culinaire intelligent">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Système de recommandation culinaire intelligent & IA conversationnelle</h3>
+                        <p class="project-summary">
+                            Recommandation de recettes basée sur les ingrédients utilisateur, avec moteur hybride et IA conversationnelle intégrée.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>spaCy</span>
+                            <span>TF-IDF</span>
+                            <span>KMeans</span>
+                            <span>LLM</span>
+                            <span>Streamlit</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn primary" type="button">Voir détails</button>
+                            <a href="https://recocuisineia-kmr9squqidlnscdydkupgj.streamlit.app/" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Démo</a>
+                            <a href="https://github.com/Sephora-MITOSSEDE/reco_cuisine_ia" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="project-card-v2 project-reveal" onclick="openProjectModal('modal2')">
+                    <div class="project-thumb">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" alt="Analyse du churn client">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Analyse du churn client — Prédiction et aide à la décision</h3>
+                        <p class="project-summary">
+                            Modélisation du churn, segmentation des clients à risque et restitution via dashboard Power BI.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Scikit-learn</span>
+                            <span>SMOTE</span>
+                            <span>Random Forest</span>
+                            <span>Gradient Boosting</span>
+                            <span>Power BI</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn primary" type="button">Voir détails</button>
+                            <a href="https://github.com/Sephora-MITOSSEDE/churn_client" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="project-card-v2 project-reveal" onclick="openProjectModal('modal3')">
+                    <div class="project-thumb">
+                        <img src="img/chat_CV.png" alt="SephBot">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>SephBot — Assistant IA RAG pour répondre aux questions sur mon parcours</h3>
+                        <p class="project-summary">
+                            Assistant IA capable de répondre de manière fiable sur mon parcours académique et professionnel à partir de documents structurés.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>LangChain</span>
+                            <span>BM25</span>
+                            <span>Embeddings</span>
+                            <span>Reranking</span>
+                            <span>Streamlit</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn primary" type="button">Voir détails</button>
+                            <a href="https://assistant-ia-sephbot.streamlit.app/" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Démo</a>
+                            <a href="https://github.com/Sephora-MITOSSEDE/Assitant_IA_CV" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 4 -->
+                <article class="project-card-v2 project-reveal" onclick="openProjectModal('modal4')">
+                    <div class="project-thumb">
+                        <img src="https://media.istockphoto.com/id/2191725702/fr/photo/interface-de-donn%C3%A9es-financi%C3%A8res-affichant-des-graphiques-des-diagrammes-%C3%A0-barres-et-des.jpg?s=1024x1024&w=is&k=20&c=gJalg_Ar6Z6BW5J-Soe_VrnL11hoRKziINSjUGoIfGU=" alt="AgriSave">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>AgriSave — Détection de maladies des plantes</h3>
+                        <p class="project-summary">
+                            Application RShiny de diagnostic végétal à partir d’images, basée sur EfficientNetB0.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>RShiny</span>
+                            <span>TensorFlow</span>
+                            <span>EfficientNetB0</span>
+                            <span>CNN</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn primary" type="button">Voir détails</button>
+                            <a href="https://github.com/Sephora-MITOSSEDE/Plante_disease" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 5 -->
+                <article class="project-card-v2 project-reveal" onclick="openProjectModal('modal5')">
+                    <div class="project-thumb">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80" alt="Pipeline ETL de web scraping">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Pipeline ETL de web scraping à grande échelle</h3>
+                        <p class="project-summary">
+                            Extraction, transformation et structuration de plus de 42 000 recettes pour des usages analytiques et de recommandation.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>BeautifulSoup</span>
+                            <span>Pandas</span>
+                            <span>ETL</span>
+                            <span>ThreadPoolExecutor</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <button class="project-btn primary" type="button">Voir détails</button>
+                            <a href="https://github.com/Sephora-MITOSSEDE/web_scraping" target="_blank" class="project-icon-btn" onclick="event.stopPropagation()">Code</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- MODAL 1 -->
+            <div id="modal1" class="project-modal-overlay">
+                <div class="project-modal">
+                    <button class="project-modal-close" onclick="closeProjectModal('modal1')">&times;</button>
+
+                    <div class="project-modal-media">
+                        <img src="img/reco_cuisine.png" alt="Reco cuisine IA">
+                    </div>
+
+                    <div class="project-modal-content">
+                        <p class="project-modal-kicker">NLP · Recommandation · IA conversationnelle</p>
+                        <h3>Système de recommandation culinaire intelligent & IA conversationnelle</h3>
+
+                        <p>
+                            Conception d’un assistant culinaire intelligent articulé autour d’un moteur de recommandation et d’une IA conversationnelle.
+                            À partir des ingrédients saisis par l’utilisateur, le système sélectionne les 5 recettes les plus pertinentes, puis affine les résultats
+                            en langage naturel grâce à une IA intégrée capable de prendre en compte les préférences, contraintes et intentions de recherche.
+                        </p>
+
+                        <div class="project-modal-block">
+                            <h4>Points clés</h4>
+                            <ul>
+                                <li>Extraction et normalisation des ingrédients avec NLP en français (spaCy).</li>
+                                <li>Système de recommandation hybride combinant TF-IDF, similarité cosinus, clustering KMeans et analyse sémantique.</li>
+                                <li>Classement des recettes les plus pertinentes et génération d’un top 5 personnalisé.</li>
+                                <li>IA conversationnelle intégrée avec GPT-4o-mini pour affiner les résultats et répondre aux questions utilisateur.</li>
+                                <li>Prise en compte de filtres contextuels : temps, budget, exclusions alimentaires, type de plat et catégorie culinaire.</li>
+                                <li>Application interactive développée avec Streamlit, avec restitution détaillée des recettes recommandées.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-modal-tags">
+                            <span>Python</span>
+                            <span>spaCy</span>
+                            <span>TF-IDF</span>
+                            <span>KMeans</span>
+                            <span>LLM</span>
+                            <span>Streamlit</span>
+                        </div>
+
+                        <div class="project-modal-actions">
+                            <a href="https://recocuisineia-kmr9squqidlnscdydkupgj.streamlit.app/" target="_blank" class="project-btn primary">Voir la démo</a>
+                            <a href="https://github.com/Sephora-MITOSSEDE/reco_cuisine_ia" target="_blank" class="project-btn secondary">Voir GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="expertise-container">
-                <div class="expertise-illustration" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500" alt="NLP">
-                </div>
-                <div class="expertise-text" data-aos="fade-left">
-                    <h3>NLP & Intelligence Artificielle</h3>
-                    <div class="skill-tags">
-                        <span>Python (spaCy, NLTK, Transformers)</span>
-                        <span>LLM & embeddings</span>
-                        <span>APIs IA générative</span>
+            <!-- MODAL 2 -->
+            <div id="modal2" class="project-modal-overlay">
+                <div class="project-modal">
+                    <button class="project-modal-close" onclick="closeProjectModal('modal2')">&times;</button>
+
+                    <div class="project-modal-media">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" alt="Churn client">
                     </div>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-bolt"></i> Traiter et analyser des données textuelles (nettoyage, vectorisation, embeddings).</li>
-                        <li><i class="fas fa-bolt"></i> Mettre en œuvre des solutions NLP : analyse de sentiments, classification.</li>
-                        <li><i class="fas fa-bolt"></i> Concevoir des assistants intelligents basés sur des modèles de langage (LLM).</li>
-                    </ul>
+
+                    <div class="project-modal-content">
+                        <p class="project-modal-kicker">Machine Learning · Analyse prédictive</p>
+                        <h3>Analyse du churn client — Prédiction et aide à la décision</h3>
+
+                        <p>
+                            Analyse des facteurs explicatifs du churn et développement de modèles de prédiction afin d’identifier les clients à risque
+                            et orienter les actions de rétention.
+                        </p>
+
+                        <div class="project-modal-block">
+                            <h4>Points clés</h4>
+                            <ul>
+                                <li>Modélisation avec Logistic Regression, Random Forest et Gradient Boosting.</li>
+                                <li>Gestion du déséquilibre des classes avec SMOTE.</li>
+                                <li>Identification des variables déterminantes du churn.</li>
+                                <li>Segmentation des clients à risque.</li>
+                                <li>Restitution des résultats via un dashboard Power BI.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-modal-tags">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>SMOTE</span>
+                            <span>Random Forest</span>
+                            <span>Gradient Boosting</span>
+                            <span>Power BI</span>
+                        </div>
+
+                        <div class="project-modal-actions">
+                            <a href="https://github.com/Sephora-MITOSSEDE/churn_client" target="_blank" class="project-btn secondary">Voir GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="expertise-container reverse">
-                <div class="expertise-text" data-aos="fade-right">
-                    <h3>Cloud & Big Data</h3>
-                    <div class="skill-tags">
-                        <span>PySpark</span>
-                        <span>Environnements cloud</span>
-                        <span>Stockage distribué</span>
+            <!-- MODAL 3 -->
+            <div id="modal3" class="project-modal-overlay">
+                <div class="project-modal">
+                    <button class="project-modal-close" onclick="closeProjectModal('modal3')">&times;</button>
+
+                    <div class="project-modal-media">
+                        <img src="img/chat_CV.png" alt="SephBot">
                     </div>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-bolt"></i> Traiter et analyser des volumes de données importants.</li>
-                        <li><i class="fas fa-bolt"></i> Concevoir des workflows data scalables et reproductibles.</li>
-                        <li><i class="fas fa-bolt"></i> Adapter les solutions data à des environnements distribués.</li>
-                    </ul>
-                </div>
-                <div class="expertise-illustration" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500" alt="Big Data">
+
+                    <div class="project-modal-content">
+                        <p class="project-modal-kicker">RAG · Recherche hybride · IA</p>
+                        <h3>SephBot — Assistant IA RAG pour répondre aux questions sur mon parcours</h3>
+
+                        <p>
+                            Assistant IA permettant de répondre de manière fiable aux questions sur mon parcours académique et professionnel
+                            à partir de documents structurés.
+                        </p>
+
+                        <div class="project-modal-block">
+                            <h4>Points clés</h4>
+                            <ul>
+                                <li>Architecture RAG hybride combinant recherche vectorielle (embeddings) et lexicale (BM25).</li>
+                                <li>Amélioration de la pertinence via reranking neuronal.</li>
+                                <li>Réduction des hallucinations grâce à une génération contrôlée.</li>
+                                <li>Traçabilité des sources utilisées dans les réponses.</li>
+                                <li>Application interactive développée avec Streamlit.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-modal-tags">
+                            <span>Python</span>
+                            <span>LangChain</span>
+                            <span>Embeddings</span>
+                            <span>BM25</span>
+                            <span>Reranking</span>
+                            <span>Streamlit</span>
+                        </div>
+
+                        <div class="project-modal-actions">
+                            <a href="https://assistant-ia-sephbot.streamlit.app/" target="_blank" class="project-btn primary">Voir la démo</a>
+                            <a href="https://github.com/Sephora-MITOSSEDE/Assitant_IA_CV" target="_blank" class="project-btn secondary">Voir GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="expertise-container">
-                <div class="expertise-illustration" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Data Viz">
-                </div>
-                <div class="expertise-text" data-aos="fade-left">
-                    <h3>Visualisation & Data storytelling</h3>
-                    <div class="skill-tags">
-                        <span>Power BI & Tableau</span>
-                        <span>Matplotlib, Seaborn</span>
-                        <span>R (ggplot2)</span>
+            <!-- MODAL 4 -->
+            <div id="modal4" class="project-modal-overlay">
+                <div class="project-modal">
+                    <button class="project-modal-close" onclick="closeProjectModal('modal4')">&times;</button>
+
+                    <div class="project-modal-media">
+                        <img src="https://media.istockphoto.com/id/2191725702/fr/photo/interface-de-donn%C3%A9es-financi%C3%A8res-affichant-des-graphiques-des-diagrammes-%C3%A0-barres-et-des.jpg?s=1024x1024&w=is&k=20&c=gJalg_Ar6Z6BW5J-Soe_VrnL11hoRKziINSjUGoIfGU=" alt="AgriSave">
                     </div>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-bolt"></i> Concevoir des tableaux de bord interactifs orientés décision.</li>
-                        <li><i class="fas fa-bolt"></i> Transformer des analyses complexes en messages clairs et visuels.</li>
-                        <li><i class="fas fa-bolt"></i> Aider les décideurs à suivre les indicateurs clés et tendances.</li>
-                    </ul>
+
+                    <div class="project-modal-content">
+                        <p class="project-modal-kicker">Vision par ordinateur · CNN</p>
+                        <h3>AgriSave — Détection de maladies des plantes</h3>
+
+                        <p>
+                            Application de détection précoce des maladies végétales à partir d’images pour faciliter l’aide à la décision.
+                        </p>
+
+                        <div class="project-modal-block">
+                            <h4>Points clés</h4>
+                            <ul>
+                                <li>Classification d’images de plantes avec EfficientNetB0 (transfer learning).</li>
+                                <li>Développement d’une application interactive avec RShiny.</li>
+                                <li>Restitution d’un diagnostic détaillé (symptômes, recommandations).</li>
+                                <li>Interface orientée aide à la décision utilisateur.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-modal-tags">
+                            <span>R</span>
+                            <span>RShiny</span>
+                            <span>TensorFlow</span>
+                            <span>EfficientNetB0</span>
+                            <span>CNN</span>
+                        </div>
+
+                        <div class="project-modal-actions">
+                            <a href="https://github.com/Sephora-MITOSSEDE/Plante_disease" target="_blank" class="project-btn secondary">Voir GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="expertise-container reverse">
-                <div class="expertise-text" data-aos="fade-right">
-                    <h3>Soft Skills & Méthodologie</h3>
-                    <div class="skill-tags">
-                        <span>Git & GitHub</span>
-                        <span>Méthodologies analytiques</span>
-                        <span>Vulgarisation</span>
-                    </div>
-                    <ul class="expertise-list">
-                        <li><i class="fas fa-bolt"></i> Travailler de manière structurée, rigoureuse et autonome.</li>
-                        <li><i class="fas fa-bolt"></i> Communiquer efficacement avec des profils techniques et métiers.</li>
-                        <li><i class="fas fa-bolt"></i> Documenter, versionner et maintenir des projets data.</li>
-                    </ul>
-                </div>
-                <div class="expertise-illustration" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500" alt="Soft Skills">
-                </div>
-            </div>
-        </section>        
+            <!-- MODAL 5 -->
+            <div id="modal5" class="project-modal-overlay">
+                <div class="project-modal">
+                    <button class="project-modal-close" onclick="closeProjectModal('modal5')">&times;</button>
 
+                    <div class="project-modal-media">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80" alt="ETL scraping">
+                    </div>
 
-        <section id="experiences" class="section">
-            <h2 class="section-title">Expériences Professionnelles</h2>
-            
-            <div class="timeline-v2">
-                <div class="timeline-item right">
-                    <div class="timeline-logo">
-                        <img src="img/logo_insee.jpg" alt="INSEE">
-                    </div>
-                    <div class="timeline-content">
-                        <span class="date-tag">Sept. 2025 - Présent</span>
-                        <h4>Alternance | Data Scientist - INSEE</h4>
-                        <p class="loc">Rennes, France</p>
-                        <ul class="mission-list">
-                            <li>Fiabilisation de données de revenus par l'évaluation de la stabilité et de la robustesse des imputations.</li>
-                            <li>Amélioration de la qualité des données via des méthodes de Machine Learning (Random Forest, MICE).</li>
-                            <li>Optimisation et interprétabilité des modèles par sélection de variables (LASSO, Ridge).</li>
-                        </ul>
-                    </div>
-                </div>
+                    <div class="project-modal-content">
+                        <p class="project-modal-kicker">ETL · Scraping · Data pipeline</p>
+                        <h3>Pipeline ETL de web scraping à grande échelle</h3>
 
-                <div class="timeline-item left">
-                    <div class="timeline-logo">
-                        <img src="img/logo_ehesp.png" alt="EHESP">
-                    </div>
-                    <div class="timeline-content">
-                        <span class="date-tag">Déc. 2024 - Août 2025</span>
-                        <h4>CDD | Data analyst - EHESP</h4>
-                        <p class="loc">Rennes, France</p>
-                        <ul class="mission-list">
-                            <li>Pilotage du processus d'enquête et conception de tableaux de bord interactifs.</li>
-                            <li>Développement de rapports analytiques reproductibles (R Markdown).</li>
-                            <li>Préparation de bases de données complexes avec Python, R et Excel.</li>
-                        </ul>
-                    </div>
-                </div>
+                        <p>
+                            Développement d’un pipeline ETL permettant d’extraire, transformer et structurer à grande échelle des données culinaires issues du web.
+                        </p>
 
-                <div class="timeline-item right">
-                    <div class="timeline-logo">
-                        <img src="img/logo_dge_benin.png" alt="DSPSSEL">
-                    </div>
-                    <div class="timeline-content">
-                        <span class="date-tag">Mai 2023 - Juil. 2023</span>
-                        <h4>Stage | Statisticienne - DSPSSEL</h4>
-                        <p class="loc">Cotonou, Bénin</p>
-                        <ul class="mission-list">
-                            <li>Conception et exploitation d'enquêtes statistiques sur la mobilité urbaine à Cotonou.</li>
-                            <li>Nettoyage, contrôle de cohérence et imputation de données sous R.</li>
-                            <li>Visualisation et synthèse des résultats pour l'aide à la décision.</li>
-                        </ul>
-                    </div>
-                </div>
+                        <div class="project-modal-block">
+                            <h4>Points clés</h4>
+                            <ul>
+                                <li>Extraction de plus de 42 000 recettes via sitemaps et parsing HTML.</li>
+                                <li>Collecte automatisée des contenus avec BeautifulSoup.</li>
+                                <li>Transformation, nettoyage et structuration des données avec Pandas.</li>
+                                <li>Optimisation des performances par parallélisation avec ThreadPoolExecutor.</li>
+                                <li>Construction d’un dataset robuste destiné à alimenter les traitements NLP et le moteur de recommandation.</li>
+                            </ul>
+                        </div>
 
-                <div class="timeline-item left">
-                    <div class="timeline-logo">
-                        <img src="img/logo-bsic.jpg" alt="BSIC">
-                    </div>
-                    <div class="timeline-content">
-                        <span class="date-tag">Déc. 2021 - Mars 2022</span>
-                        <h4>Stage | Gestion des Risques - BSIC</h4>
-                        <p class="loc">Cotonou, Bénin</p>
-                        <ul class="mission-list">
-                            <li><strong>Analyse prédictive :</strong> Déterminants des créances en souffrance pour le profil type du client solvable.</li>
-                            <li><strong>Audit :</strong> Vérification effective des pièces de crédit et dépouillement des dossiers.</li>
-                        </ul>
+                        <div class="project-modal-tags">
+                            <span>Python</span>
+                            <span>BeautifulSoup</span>
+                            <span>Pandas</span>
+                            <span>ETL</span>
+                            <span>ThreadPoolExecutor</span>
+                        </div>
+
+                        <div class="project-modal-actions">
+                            <a href="https://github.com/Sephora-MITOSSEDE/web_scraping" target="_blank" class="project-btn secondary">Voir GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+
+        <section id="experiences" class="section experiences-section">
+            <div class="experiences-header">
+                <h2 class="section-title">Expériences Professionnelles</h2>
+                <p class="experiences-subtitle">
+                    Parcours en data science, data analyse et statistique appliquée, avec des missions orientées
+                    modélisation, qualité des données, automatisation et aide à la décision.
+                </p>
+            </div>
+
+            <div class="timeline-pro">
+
+                <!-- EXPERIENCE 1 -->
+                <div class="timeline-row" data-aos="fade-up">
+                    <div class="timeline-card timeline-card-small">
+                        <p class="timeline-period">📅 Sept. 2025 – Août 2026</p>
+                        <h3>Alternance | Data Scientist</h3>
+                        <p class="timeline-org">INSEE</p>
+                        <p class="timeline-loc">Rennes, France</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-icon">
+                            <img src="img/logo_insee.jpg" alt="INSEE">
+                        </div>
+                    </div>
+
+                    <div class="timeline-card timeline-card-large">
+                        <h3>Institut National de la Statistique et des Études Économiques (INSEE)</h3>
+                        <ul class="timeline-list">
+                            <li>Optimisation de la méthode d’imputation des revenus en évaluant plusieurs modèles : Random Forest, Gradient Boosting et MICE.</li>
+                            <li>Mise en place du modèle d’imputation optimal, permettant une réduction de <strong>24 % du RMSE</strong> par rapport à la méthode existante.</li>
+                            <li>Exploration de données à grande échelle : <strong>12 millions d’individus</strong> et plus de <strong>600 variables</strong> pour identifier les variables pertinentes.</li>
+                            <li>Restitution des résultats via dashboards et rapports pour accompagner la prise de décision.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE 2 -->
+                <div class="timeline-row" data-aos="fade-up" data-aos-delay="80">
+                    <div class="timeline-card timeline-card-small">
+                        <p class="timeline-period">📅 Déc. 2024 – Août 2025</p>
+                        <h3>CDD | Data Analyst</h3>
+                        <p class="timeline-org">EHESP</p>
+                        <p class="timeline-loc">Rennes, France</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-icon">
+                            <img src="img/logo_ehesp.png" alt="EHESP">
+                        </div>
+                    </div>
+
+                    <div class="timeline-card timeline-card-large">
+                        <h3>École des hautes études en santé publique (EHESP)</h3>
+                        <ul class="timeline-list">
+                            <li>Analyse et exploitation de données en santé publique avec <strong>Python, R et Excel</strong> pour la production d’indicateurs.</li>
+                            <li>Automatisation de rapports analytiques et traitement de données d’enquêtes avec <strong>R Markdown</strong> et <strong>Sphinx</strong>.</li>
+                            <li>Préparation, structuration et fiabilisation de bases de données pour des analyses reproductibles.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE 3 -->
+                <div class="timeline-row" data-aos="fade-up" data-aos-delay="120">
+                    <div class="timeline-card timeline-card-small">
+                        <p class="timeline-period">📅 Mai 2023 – Juil. 2023</p>
+                        <h3>Stage | Statisticienne</h3>
+                        <p class="timeline-org">DSPSSEL</p>
+                        <p class="timeline-loc">Cotonou, Bénin</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-icon">
+                            <img src="img/logo_dge_benin.png" alt="DSPSSEL">
+                        </div>
+                    </div>
+
+                    <div class="timeline-card timeline-card-large">
+                        <h3>DSPSSEL (Ministère de l'Économie)</h3>
+                        <ul class="timeline-list">
+                            <li>Conception et analyse d’enquêtes statistiques sur la mobilité urbaine, contribuant à l’étude des transports collectifs à Cotonou.</li>
+                            <li>Nettoyage, contrôle de cohérence et imputation de données sous <strong>R</strong>.</li>
+                            <li>Production de synthèses statistiques pour appuyer l’interprétation des résultats et l’aide à la décision.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE 4 -->
+                <div class="timeline-row" data-aos="fade-up" data-aos-delay="180">
+                    <div class="timeline-card timeline-card-small">
+                        <p class="timeline-period">📅 Déc. 2021 – Mars 2022</p>
+                        <h3>Stage | Analyste risque crédit</h3>
+                        <p class="timeline-org">BSIC</p>
+                        <p class="timeline-loc">Cotonou, Bénin</p>
+                    </div>
+
+                    <div class="timeline-center">
+                        <div class="timeline-icon">
+                            <img src="img/logo-bsic.jpg" alt="BSIC">
+                        </div>
+                    </div>
+
+                    <div class="timeline-card timeline-card-large">
+                        <h3>Banque Sahélo-Saharienne pour l’Investissement et le Commerce (BSIC)</h3>
+                        <ul class="timeline-list">
+                            <li>Analyse de données de crédit pour l’identification des facteurs associés au risque de défaut.</li>
+                            <li>Étude des déterminants des créances en souffrance afin de mieux caractériser le profil du client solvable.</li>
+                            <li>Contrôle documentaire et vérification de la conformité des dossiers de crédit dans le cadre des procédures internes.</li>
+                            <li>Appui aux activités de suivi du risque et de fiabilisation des informations utilisées dans les analyses.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <section id="formation" class="section formation-section">
             <h2 class="section-title">Parcours Académique</h2>
@@ -321,139 +837,25 @@
             </div>
         </section>      
 
-        <section id="projets" class="section projects-section">
-            <h2 class="section-title">Projets sélectionnés</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card" onclick="openModal('modal1')">
-                    <img src="img/img_nlp.png" alt="NLP Project" class="project-img">
-                    <div class="project-overlay"><span>Détails du projet</span></div>
-                    <div class="project-brief">
-                        <h4>Système de recommandation culinaire</h4>
-                        <p>NLP & LLM Chatbot</p>
-                    </div>
-                </div>
 
-                <div class="project-card" onclick="openModal('modal2')">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Churn Analysis" class="project-img">
-                    <div class="project-overlay"><span>Détails du projet</span></div>
-                    <div class="project-brief">
-                        <h4>Analyse du churn client</h4>
-                        <p>Machine Learning & Power BI</p>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openModal('modal3')">
-                    <img src="https://plus.unsplash.com/premium_photo-1681487767138-ddf2d67b35c1?q=80&w=1910&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Time Series" class="project-img">
-                    <div class="project-overlay"><span>Détails du projet</span></div>
-                    <div class="project-brief">
-                        <h4>Prédiction de séries temporelles</h4>
-                        <p>Finance & Deep Learning</p>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="openModal('modal4')">
-                    <img src="https://media.istockphoto.com/id/2191725702/fr/photo/interface-de-donn%C3%A9es-financi%C3%A8res-affichant-des-graphiques-des-diagrammes-%C3%A0-barres-et-des.jpg?s=1024x1024&w=is&k=20&c=gJalg_Ar6Z6BW5J-Soe_VrnL11hoRKziINSjUGoIfGU=" alt="Automation" class="project-img">
-                    <div class="project-overlay"><span>Détails du projet</span></div>
-                    <div class="project-brief">
-                        <h4>Automatisation de rapports</h4>
-                        <p>R Markdown & Data Viz</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal1')">&times;</span>
-                    <img src="img_nlp.png" class="modal-img">
-                    <h4>Système de recommandation culinaire</h4>
-                    <p><strong>Langage :</strong> Python</p>
-                    <p><strong>Packages :</strong> LangChain, OpenAI API, Streamlit, Pandas, NLTK</p>
-                    <div class="modal-desc">
-                        <p>Développement d'un chatbot basé sur Vector Search pour suggérer des recettes à partir de données scrapées.</p>
-                        <ul>
-                            <li>Prétraitement de texte (NLP).</li>
-                            <li>Stockage vectoriel des recettes.</li>
-                            <li>Interface utilisateur interactive.</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/ton-profil/nlp-culinaire" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-            </div>
-
-            <div id="modal2" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal2')">&times;</span>
-                    <img src="img_nlp.png" class="modal-img">
-                    <h4>Analyse du churn client</h4>
-                    <p><strong>Langage :</strong> Python, R</p>
-                    <p><strong>Packages :</strong> Scikit-learn, XGBoost, Tidyverse, Power BI</p>
-                    <div class="modal-desc">
-                        <p>Comparaison de modèles de classification pour prédire le départ des clients et identifier les leviers de rétention.</p>
-                        <ul>
-                            <li>Gestion du déséquilibre (SMOTE).</li>
-                            <li>Feature Engineering avancé.</li>
-                            <li>Dashboarding décisionnel.</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/ton-profil/churn-analysis" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-            </div>
-
-            <div id="modal3" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal3')">&times;</span>
-                    <img src="img_nlp.png" class="modal-img">
-                    <h4>Prédiction de séries temporelles</h4>
-                    <p><strong>Langage :</strong> Python, R</p>
-                    <p><strong>Packages :</strong> Statsmodels, Prophet, TensorFlow, ggplot2</p>
-                    <div class="modal-desc">
-                        <p>Analyse et prédiction de tendances financières en utilisant des approches hybrides statistiques et neuronales.</p>
-                        <ul>
-                            <li>Modélisation ARIMA pour les tendances.</li>
-                            <li>Architecture LSTM pour la prédiction long terme.</li>
-                            <li>Tests de stationnarité et saisonnalité.</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/ton-profil/time-series" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-            </div>
-
-            <div id="modal4" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal4')">&times;</span>
-                    <img src="img_nlp.png" class="modal-img">
-                    <h4>Automatisation de rapports</h4>
-                    <p><strong>Langage :</strong> R, SQL</p>
-                    <p><strong>Packages :</strong> R Markdown, Knitr, Dplyr, Plotly</p>
-                    <div class="modal-desc">
-                        <p>Mise en place d'un flux de travail automatisé pour la génération de synthèses statistiques reproductibles.</p>
-                        <ul>
-                            <li>Scripts d'imputation automatique.</li>
-                            <li>Génération de PDF/HTML dynamiques.</li>
-                            <li>Visualisations interactives.</li>
-                        </ul>
-                    </div>
-                    <a href="https://github.com/ton-profil/r-automation" target="_blank" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-            </div>
-        </section>
 
 
         <div id="ai-chat-container" class="chat-closed">
-            <div class="chat-header" onclick="toggleChat()">
-                <i class="fas fa-robot"></i>
-                <span>Posez une question à mon IA</span>
-                <i class="fas fa-chevron-up" id="chat-icon"></i>
-            </div>
-            <div class="chat-body" id="chat-body">
-                <div class="ai-msg">Bonjour Séphora ! Je connais tout sur le parcours de Séphora. Que voulez-vous savoir ?</div>
-            </div>
-            <div class="chat-footer">
-                <input type="text" id="user-input" placeholder="Son expérience à l'INSEE ?">
-                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>        
+        <div class="chat-header" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+            <span>Posez une question à mon IA</span>
+            <i class="fas fa-chevron-up" id="chat-icon"></i>
+        </div>
+
+        <div class="chat-embed" id="chat-embed">
+            <iframe
+            src="https://assistant-ia-sephbot.streamlit.app/?embed=true"
+            title="SephBot"
+            loading="lazy"
+            allow="clipboard-read; clipboard-write"
+            ></iframe>
+        </div>
+        </div>    
 
         <section id="contact" class="section contact-section">
             <h2 class="section-title">Contactez-moi</h2>
@@ -482,10 +884,10 @@
             <div class="social-container">
                 <h3>Retrouvez-moi sur</h3>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/ton-profil" target="_blank" class="social-btn linkedin">
+                    <a href="https://www.linkedin.com/in/sephora-mitossede-a4b62a346/" target="_blank" class="social-btn linkedin">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/ton-profil" target="_blank" class="social-btn github">
+                    <a href="https://github.com/Sephora-MITOSSEDE" target="_blank" class="social-btn github">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -502,16 +904,15 @@
             <p>&copy; 2026 Séphora MITOSSEDE — Tous droits réservés.</p>
         </footer>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
-    <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+        </script>
 
 </body>
 </html>
