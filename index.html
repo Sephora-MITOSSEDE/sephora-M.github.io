@@ -6,7 +6,7 @@
     <title>Séphora MITOSSEDE | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -61,14 +61,13 @@
                 <div class="about-info">
                     
                     
-                    <p>
-                        Spécialisée en analyse statistique et machine learning, 
+                   <p>
+                        Data Analyst & Data Scientist spécialisée en analyse statistique et machine learning, 
                         je conçois des solutions data pour transformer les données en leviers de décision. 
                         Mon profil allie rigueur quantitative, maîtrise des outils data et compréhension des enjeux métiers, 
                         avec une intervention sur l’ensemble de la chaîne de valeur, de la préparation des données 
                         à la modélisation et à la restitution des résultats.
                     </p>
-                    
 
                     <div class="info-box-container">
                         <div class="info-box">
@@ -81,9 +80,15 @@
                         </div>
                     </div>
 
-                    <a href="CV_dataSeph.pdf" class="btn-cv" download>
-                        <i class="fas fa-download"></i> Télécharger mon CV
-                    </a>
+                    <div class="cv-buttons">
+                        <a href="CV_Seph_analyst.pdf" class="btn-cv" target="_blank">
+                            <i class="fas fa-download"></i> CV Data Analyst
+                        </a>
+
+                        <a href="CV_Sephora.pdf" class="btn-cv secondary" target="_blank">
+                            <i class="fas fa-download"></i> CV Data Scientist
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -839,23 +844,28 @@
 
 
 
+        <div class="chat-wrapper">
+            <div class="chat-hint" id="chat-hint" onclick="toggleChat()">
+                Discute avec mon IA
+            </div>
 
-        <div id="ai-chat-container" class="chat-closed">
-        <div class="chat-header" onclick="toggleChat()">
-            <i class="fas fa-robot"></i>
-            <span>Posez une question à mon IA</span>
-            <i class="fas fa-chevron-up" id="chat-icon"></i>
-        </div>
+            <div id="ai-chat-container" class="chat-closed">
+                <div class="chat-header" onclick="toggleChat()">
+                    <i class="fas fa-robot"></i>
+                    <span>Posez une question à mon IA</span>
+                    <i class="fas fa-chevron-up" id="chat-icon"></i>
+                </div>
 
-        <div class="chat-embed" id="chat-embed">
-            <iframe
-            src="https://assistant-ia-sephbot.streamlit.app/?embed=true"
-            title="SephBot"
-            loading="lazy"
-            allow="clipboard-read; clipboard-write"
-            ></iframe>
+                <div class="chat-embed" id="chat-embed">
+                    <iframe
+                        src="https://assistant-ia-sephbot.streamlit.app/?embed=true"
+                        title="SephBot"
+                        loading="lazy"
+                        allow="clipboard-read; clipboard-write">
+                    </iframe>
+                </div>
+            </div>
         </div>
-        </div>    
 
         <section id="contact" class="section contact-section">
             <h2 class="section-title">Contactez-moi</h2>
