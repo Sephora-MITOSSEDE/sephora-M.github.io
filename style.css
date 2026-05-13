@@ -1544,6 +1544,18 @@ body {
     color: #4285f4;
 }
 
+.project-coming-soon{
+    color:#4285f4;
+    background:#f5f9ff;
+    border:1px solid #dbe6f6;
+    padding:11px 16px;
+    border-radius:12px;
+    font-size:0.92rem;
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+}
+
 .project-modal-close {
     position: absolute;
     top: 14px;
@@ -1669,6 +1681,12 @@ body {
         width: 100%;
         justify-content: center;
     }
+
+    .project-coming-soon{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+}
 }
 
 /* --- CHAT IA + BULLE D'ACCROCHE --- */
