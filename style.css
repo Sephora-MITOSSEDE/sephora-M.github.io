@@ -1544,6 +1544,11 @@ body {
     color: #4285f4;
 }
 
+.construction-btn{
+    cursor: default;
+    opacity: 0.9;
+}
+
 .project-coming-soon{
     color:#4285f4;
     background:#f5f9ff;
