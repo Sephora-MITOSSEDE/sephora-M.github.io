@@ -37,28 +37,6 @@ document.addEventListener("keydown", function (e) {
 });
 
 
-/* =========================
-   CHAT IA
-   ========================= */
-
-function toggleChat() {
-    const container = document.getElementById("ai-chat-container");
-    const wrapper = document.querySelector(".chat-wrapper");
-
-    container.classList.toggle("chat-closed");
-    container.classList.toggle("chat-open");
-
-    if (container.classList.contains("chat-open")) {
-        wrapper.classList.add("chat-opened");
-    } else {
-        wrapper.classList.remove("chat-opened");
-    }
-}
-
-
-document.querySelector(".chat-hint").addEventListener("click", function() {
-    this.style.display = "none";
-});
 
 /* =========================
    EXPERTISES
